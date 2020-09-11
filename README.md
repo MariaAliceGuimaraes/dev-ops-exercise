@@ -18,3 +18,33 @@ app
     * Intervalo: 5s
     * Timeout: 1s
     * Tentativas: 2
+
+---
+
+Como referência, se o container executar corretamente iremos verificar o estado da aplicação.
+
+Uma das formas que usamos é o comando docker ps: 
+
+### Exemplo de container status healthy
+
+```
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                   PORTS                  NAMES
+3603b08b7d53        x_web               "docker-php-entrypoi…"   8 minutes ago       Up 8 minutes (healthy)   0.0.0.0:8000->80/tcp   x_web_1
+```
+
+### Exemplo de container status unhealthy
+
+```
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS                  NAMES
+0fc2434c462f        x_web               "docker-php-entrypoi…"   31 seconds ago      Up 30 seconds (unhealthy)   0.0.0.0:8000->80/tcp   x_web_1
+```
+
+### Exemplo sem healthcheck:
+
+```
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                  NAMES
+08292ede4c30        x_web               "docker-php-entrypoi…"   16 seconds ago      Up 15 seconds       0.0.0.0:8000->80/tcp   x_web_1
+```
