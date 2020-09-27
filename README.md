@@ -1,3 +1,16 @@
+## Como rodar
+
+Para rodar a aplicação utilize os seguintes comandos:
+
+```
+$ docker-compose build web
+$ docker-compose run --service-ports web
+```
+
+A aplicação ficará disponível na porta `8000` do servidor.
+
+## Instrucoes
+
 Crie um arquivo docker-compose.yml com as seguintes especificações:
 * Quantidade de serviços: 1
 * Nome do serviço: web
