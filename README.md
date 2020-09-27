@@ -9,6 +9,8 @@ $ docker-compose run --service-ports web
 
 A aplicação ficará disponível na porta `8000` do servidor.
 
+![Imagem da aplicação](./img/website.png)
+
 ## Instrucoes
 
 Crie um arquivo docker-compose.yml com as seguintes especificações:
